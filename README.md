@@ -1,37 +1,36 @@
 Android Studio java program called CaesarCipher (uses google native UI instead of JavaFX); slide Shift 13 Encrypt/Decrypt like ROT13
 
 SNIPPET - build.gradle:
+plugins {
+    id 'com.android.application' version '8.3.2' apply false
+}
 
-alias(libs.plugins.android.application) apply false
+
 
 SNIPPET - gradle.properties:
 
 org.gradle.jvmargs=-Xmx2048m -Dfile.encoding=UTF-8
-
 android.useAndroidX=true
+android.enableJetifier=true
 
-android.nonTransitiveRClass=true
 
 SNIPPET - settings.gradle:
-
-            includeGroupByRegex("com\\.android.*")
-
-            includeGroupByRegex("com\\.google.*")
-
-            includeGroupByRegex("androidx.*")
-    
-    mavenCentral()
-
-    gradlePluginPortal()
-
-id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
-
-repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    
-    google()
-
-    mavenCentral()
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
 
 rootProject.name = "CaesarCipher"
+include ':app'
 
 (><)

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Caesar Cipher</string>
+    <string name="copied">✓ Copied!</string>
+    <string name="copy_output">📋 Copy Output</string>
+    <string name="nothing_to_copy">Nothing to copy yet.</string>
+</resources>

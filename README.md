@@ -1,5 +1,7 @@
 Android Studio java program called CaesarCipher (uses google native UI instead of JavaFX); slide Shift 13 Encrypt/Decrypt like ROT13
 
+
+
 SNIPPET - build.gradle:
 
     id 'com.android.application' version '8.3.2' apply false
@@ -31,8 +33,6 @@ SNIPPET - settings.gradle:
         mavenCentral()
   
 rootProject.name = "CaesarCipher"
-
-include ':app'
 
 
 
